@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECH ZONE - Toko Elektronik</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo"><span>TECH</span> ZONE</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#produk">Produk</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#promo">Promo</a>
+        <a href="#tentang">Tentang Kami</a>
+      </nav>
+
+      <a class="wa-top" href="https://wa.me/6285641162696" target="_blank">
+        WhatsApp
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <p class="small-title">WELCOME TO TECH ZONE</p>
+          <h1>Teknologi Terbaik untuk <span>Setiap Kebutuhan</span></h1>
+          <p class="hero-desc">
+            Temukan berbagai perangkat elektronik modern untuk kebutuhan
+            sekolah, kuliah, pekerjaan, rumah, dan aktivitas sehari-hari.
+          </p>
+          <a href="#produk" class="button">Belanja Sekarang</a>
+        </div>
+
+        <div class="hero-card">
+          <div class="circle"></div>
+          <div class="hero-icon">⚡</div>
+          <h3>Smart Technology</h3>
+          <p>Modern • Simple • Reliable</p>
+        </div>
+      </section>
+
+      <section class="section" id="kategori">
+        <div class="section-title">
+          <p>KATEGORI</p>
+          <h2>Pilih Sesuai Kebutuhanmu</h2>
+        </div>
+
+        <div class="category-list">
+          <button onclick="pilihKategori('Semua')">Semua</button>
+          <button onclick="pilihKategori('Laptop')">Laptop</button>
+          <button onclick="pilihKategori('Smartphone')">Smartphone</button>
+          <button onclick="pilihKategori('Smartwatch')">Smartwatch</button>
+          <button onclick="pilihKategori('Headset')">Headset</button>
+          <button onclick="pilihKategori('Power Bank')">Power Bank</button>
+          <button onclick="pilihKategori('Keyboard')">Keyboard</button>
+          <button onclick="pilihKategori('Charger')">Charger</button>
+          <button onclick="pilihKategori('Mouse')">Mouse</button>
+          <button onclick="pilihKategori('Kabel Data')">Kabel Data</button>
+          <button onclick="pilihKategori('Speaker')">Speaker</button>
+          <button onclick="pilihKategori('Aksesoris Komputer')">
+            Aksesoris
+          </button>
+        </div>
+      </section>
+
+      <section class="section" id="produk">
+        <div class="section-heading">
+          <div class="section-title">
+            <p>KOLEKSI PRODUK</p>
+            <h2>Produk Pilihan TECH ZONE</h2>
+          </div>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Cari produk..."
+              onkeyup="tampilkanProduk()"
+            />
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="promo" id="promo">
+        <div>
+          <p class="small-title">SPECIAL OFFER</p>
+          <h2>Promo Menarik Setiap Saat</h2>
+          <p>
+            Dapatkan produk teknologi pilihan dengan harga yang lebih hemat.
+          </p>
+        </div>
+        <a href="#produk" class="button light">Lihat Produk</a>
+      </section>
+
+      <section class="about" id="tentang">
+        <div class="section-title">
+          <p>TENTANG KAMI</p>
+          <h2>TECH ZONE</h2>
+        </div>
+        <p>
+          TECH ZONE adalah toko elektronik sederhana yang menyediakan berbagai
+          perangkat teknologi untuk mendukung kebutuhan sekolah, kuliah,
+          pekerjaan, rumah, dan aktivitas sehari-hari.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <strong>TECH ZONE</strong>
+        <p>Solusi teknologi untuk kebutuhanmu.</p>
+      </div>
+      <div>
+        <p>WhatsApp: 0856-4116-2696</p>
+        <p>© 2026 TECH ZONE</p>
+      </div>
+    </footer>
+
+    <div class="modal" id="detailModal">
+      <div class="modal-content">
+        <button class="close" onclick="tutupDetail()">×</button>
+        <img id="detailImage" src="" alt="Produk" />
+        <div>
+          <p class="modal-category" id="detailCategory"></p>
+          <h2 id="detailName"></h2>
+          <h3 id="detailPrice"></h3>
+          <p id="detailDescription"></p>
+          <h4>Spesifikasi</h4>
+          <ul id="detailSpecs"></ul>
+          <a id="detailBuy" class="button" href="#" target="_blank"
+            >Beli via WhatsApp</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
